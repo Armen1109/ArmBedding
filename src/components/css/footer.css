@@ -1,0 +1,84 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer{
+    width: 100%;
+    background-color: #b200b2;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li{
+    color: white;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+p{
+    font-size: 23px;
+    color: white;
+    font-weight: 700;
+}
+
+.ficon{
+    width: 20px;
+}
+
+.footer-menu > li:hover{
+    font-size: 22px;
+}
+ */
+
+
+ /* Reset default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles for the footer */
+.footer {
+    width: 100%;
+    background-color: #b200b2;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-content: space-around;
+    gap: 100px;
+}
+
+/* Footer item styles */
+li {
+    color: white;
+    font-size: 20px;
+    transition: 0.5s;
+    margin: 10px 0; /* Add vertical margin for spacing on small screens */
+    text-align: center; /* Center-align text on small screens */
+}
+
+p {
+    font-size: 23px;
+    color: white;
+    font-weight: 700;
+    text-align: center; /* Center-align text on small screens */
+}
+
+.ficon {
+    width: 20px;
+}
+
+/* Increase font size on hover for list items */
+.footer-menu > li:hover {
+    font-size: 22px;
+}
+
+@media (max-width: 835px){
+    .product{
+        width: 300px;
+    }
+}

@@ -1,29 +1,62 @@
-import React from 'react';
+// import React from 'react';
+// import './css/header.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+// import { NavLink } from 'react-router-dom';
+
+// function Header() {
+//   return (
+
+//     <header>
+//       <div className="logo">
+//   <NavLink to={'/'}><img className='logo-img' src={process.env.PUBLIC_URL + '/logo.png'}/></NavLink>
+//       </div>
+//         <ul className='nav'>
+//         <li><NavLink to={'/'}>Գլխավոր էջ</NavLink></li>
+//         <li><NavLink to={'/Products'}>Տեսականի</NavLink> </li>
+//         <li><NavLink to={'/delivery'}>Առաքում</NavLink></li>
+//         <li><NavLink to={'/feedback'}>Հետադարձ կապ</NavLink></li>
+//       </ul>
+//     </header>
+//   )
+// }
+
+// export default Header
+
+import React, { useState } from 'react';
 import './css/header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    
-        <header>
-            <p className='logo'>ArmBedding</p>
-            <ul className='nav'>
-                <li>Գլխավոր էջ</li>
-                <li>Լավագույն ապրանքներ</li>
-                <li>Զեղչեր</li>
-                <li>Մեր Մասին</li>
-            </ul>
-            <nav class="navbar">
-  <div class="container-fluid">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button class="search-button" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-        </header>
+    <header>
+      <div className="logo">
+        <NavLink to={'/'}>
+          <img className='logo-img' src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" />
+        </NavLink>
+      </div>
+
+      <div className={isMenuOpen ? 'open-menu' : 'burger-menu'}>
+
+          <img className='burger' onClick={toggleMenu} src={process.env.PUBLIC_URL + '/burger-menu.svg'} alt="" />
+
+      <ul className={`nav${isMenuOpen ? '-open' : ''}`}>
+        <li><NavLink to={'/'} className={isMenuOpen ? 'open-link' : 'nlink'}>Գլխավոր էջ</NavLink></li>
+        <li><NavLink to={'/Products'} className={isMenuOpen ? 'open-link' : 'nlink'}>Տեսականի</NavLink></li>
+        <li><NavLink to={'/delivery'} className={isMenuOpen ? 'open-link' : 'nlink'}>Առաքում</NavLink></li>
+        <li><NavLink to={'/feedback'} className={isMenuOpen ? 'open-link' : 'nlink'}>Հետադարձ կապ</NavLink></li>
+      </ul>
+      </div>
+    </header>
   )
 }
 
-export default Header
+export default Header;

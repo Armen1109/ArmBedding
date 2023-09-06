@@ -1,7 +1,7 @@
 let api = [
     {
         image: 'https://lt2.pigugroup.eu/colours/360/519/59/36051959/patalynes-komplektas-monstera-200x220-4-daliu_reference.jpg',
-        name: 'Անկողնային հավաքածու #0001',
+        name: 'Անկողնային հավաքածու, #0001',
         product1:{
             name: 'մեկ տեղանոց',
             price: '4500֏',
@@ -425,7 +425,7 @@ let api = [
         },
     },
     {
-        image: 'https://scontent.fevn9-1.fna.fbcdn.net/v/t39.30808-6/346476175_249970320908256_3136867983715131241_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5614bc&_nc_ohc=jd0GWgKpf60AX92__pr&_nc_ht=scontent.fevn9-1.fna&oh=00_AfABR4YdpZNqI52BU3-6IwEVtdFX9EIye9YOXW5fOjWKog&oe=64ED0C79',
+        image: 'https://static.mercdn.net/item/detail/orig/photos/m59813539892_1.jpg?1688511707',
         name: 'Անկողնային հավաքածու, #0019',
         product1:{
             name: 'մեկ տեղանոց',
@@ -493,29 +493,13 @@ let api = [
             barc: '2 x 70x70',
         },
     },
-    {
-        image: 'https://static.mercdn.net/item/detail/orig/photos/m59813539892_1.jpg?1688511707',
-        name: 'Անկողնային հավաքածու, #0022',
-        product1:{
-            name: 'մեկ տեղանոց',
-            price: '4500֏',
-            size: '150x220',
-            barc: '50x70 / 70x70',
-        },
-        product2:{
-            name:  'երկու տեղանոց',
-            price: '7500֏',
-            size:  '220x240',
-            barc:  '50x70 / 70x70',
-        },
-        product3:{
-            name: 'ընտանեկան',
-            price: '8500֏',
-            size: '220x220',
-            crar: '2 x 150x220',
-            barc: '2 x 70x70',
-        },
-    },
+    
 ]
+
+api.forEach((item, index) => {
+    item.id = `${index + 1}`;
+  });
+
+  
 
 export default api
