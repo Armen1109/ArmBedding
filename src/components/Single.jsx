@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import React, { useState } from 'react'
 import api from '../api'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/single.css'
 
 function Single() {

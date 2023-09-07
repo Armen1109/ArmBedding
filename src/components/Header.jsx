@@ -1,32 +1,7 @@
-// import React from 'react';
-// import './css/header.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-// import { NavLink } from 'react-router-dom';
-
-// function Header() {
-//   return (
-
-//     <header>
-//       <div className="logo">
-//   <NavLink to={'/'}><img className='logo-img' src={process.env.PUBLIC_URL + '/logo.png'}/></NavLink>
-//       </div>
-//         <ul className='nav'>
-//         <li><NavLink to={'/'}>Գլխավոր էջ</NavLink></li>
-//         <li><NavLink to={'/Products'}>Տեսականի</NavLink> </li>
-//         <li><NavLink to={'/delivery'}>Առաքում</NavLink></li>
-//         <li><NavLink to={'/feedback'}>Հետադարձ կապ</NavLink></li>
-//       </ul>
-//     </header>
-//   )
-// }
-
-// export default Header
-
 import React, { useState } from 'react';
 import './css/header.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { NavLink } from 'react-router-dom';
 
 function Header() {
